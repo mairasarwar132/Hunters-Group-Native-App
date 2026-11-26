@@ -91,12 +91,3 @@ The APK produced during project verification was approximately 74.3 MB (78,000,0
 ## Screenshots
 
 No application screenshots are included in this repository yet.
-
-## Known limitations and scope notes
-
-- The contact form opens WhatsApp with a prepared message; it does not send automatically. The user must review and send it in WhatsApp.
-- The public site does not list a contact email, so the app does not invent an email action.
-- The site's `/services/warehousing` sitemap URL returned 404 during inspection and is not in the live services menu; a separate warehousing detail screen is not fabricated.
-- Achievement captions are limited to information available on the public results page.
-- iOS compilation, signing and simulator/device testing require macOS and Xcode and could not be performed in this Windows environment.
-- Android build metadata was verified, but no Android emulator or physical device was available for installation testing.
