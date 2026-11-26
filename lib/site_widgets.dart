@@ -115,32 +115,14 @@ class PageFrame extends StatelessWidget {
         ],
       ),
       body: child,
-      floatingActionButton: Column(
-        mainAxisSize: MainAxisSize.min,
-        crossAxisAlignment: CrossAxisAlignment.end,
-        children: [
-          if (currentRoute != '/assistant') ...[
-            FloatingActionButton(
-              heroTag: 'hunters-assistant',
-              mini: true,
-              tooltip: 'Open Hunters AI Assistant',
-              backgroundColor: BrandColors.navy,
-              foregroundColor: Colors.white,
-              onPressed: () => Navigator.of(context).pushNamed('/assistant'),
-              child: const Icon(Icons.chat_bubble_outline_rounded),
-            ),
-            const SizedBox(height: 10),
-          ],
-          FloatingActionButton(
-            heroTag: 'hunters-whatsapp',
-            mini: true,
-            tooltip: 'Chat with Hunters Group on WhatsApp',
-            backgroundColor: const Color(0xFF18B86A),
-            foregroundColor: Colors.white,
-            onPressed: () => launchExternal(context, whatsAppUri()),
-            child: const Icon(Icons.chat_rounded),
-          ),
-        ],
+      floatingActionButton: FloatingActionButton(
+        heroTag: 'hunters-whatsapp',
+        mini: true,
+        tooltip: 'Chat with Hunters Group on WhatsApp',
+        backgroundColor: const Color(0xFF18B86A),
+        foregroundColor: Colors.white,
+        onPressed: () => launchExternal(context, whatsAppUri()),
+        child: const Icon(Icons.chat_rounded),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
       bottomNavigationBar: NavigationBar(
@@ -192,7 +174,6 @@ class PageFrame extends StatelessWidget {
                 ('Results & Achievements', '/results', Icons.emoji_events_outlined),
                 ('Events', '/events', Icons.event_outlined),
                 ('Brands', '/brands', Icons.storefront_outlined),
-                ('Hunters AI Assistant', '/assistant', Icons.chat_bubble_outline_rounded),
                 ('Contact', '/contact', Icons.chat_bubble_outline),
               ].map((item) => ListTile(
                     leading: Icon(item.$3, color: BrandColors.blue),

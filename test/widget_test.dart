@@ -75,7 +75,7 @@ void main() {
     expect(find.text('Please select a service.'), findsOneWidget);
   });
 
-  testWidgets('secondary pages and the assistant are reachable from navigation', (tester) async {
+  testWidgets('secondary pages are reachable from navigation', (tester) async {
     tester.view.physicalSize = const Size(900, 1600);
     tester.view.devicePixelRatio = 1;
     addTearDown(tester.view.resetPhysicalSize);
@@ -99,11 +99,6 @@ void main() {
     await _openMenuOption(tester, 'Our Process');
     expect(find.text('Simple steps. Real progress.'), findsOneWidget);
 
-    await _openMenuOption(tester, 'Hunters AI Assistant');
-    await tester.tap(find.text('What services do you offer?'));
-    await tester.pumpAndSettle();
-    expect(find.textContaining('Hunters Group offers E-Commerce Solutions'), findsOneWidget);
-    expect(find.text('View all services'), findsOneWidget);
   });
 
   testWidgets('all page routes render at a compact phone width', (tester) async {
@@ -139,7 +134,6 @@ void main() {
       '/brands',
       '/why-hunters',
       '/process',
-      '/assistant',
     ];
 
     for (final route in routes) {

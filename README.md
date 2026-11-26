@@ -19,7 +19,6 @@ The app brings the company's public information, service listings, leadership, e
 - Brands page for Hunters Group and Shifa Organic.
 - Contact form with required-field validation that prepares an inquiry in WhatsApp; the user reviews and sends it there.
 - Native external actions for WhatsApp, phone, Instagram and Facebook.
-- On-device assistant with curated service information and links. It is not connected to a hosted AI service.
 - Bottom navigation, a full navigation menu, contextual internal links, and native back navigation.
 - Responsive layouts, branded Android/iOS launcher icons, and original company imagery.
 
@@ -43,7 +42,7 @@ Flutter and Dart versions, Android SDK, and Xcode versions on another machine ma
 ├── lib/
 │   ├── main.dart                App theme, app entry point and route table
 │   ├── site_content.dart        Website-derived services, content and asset references
-│   ├── site_pages.dart          Native screens and form/chat interactions
+│   ├── site_pages.dart          Native screens and contact interactions
 │   └── site_widgets.dart        Shared responsive UI, navigation and external-link helpers
 ├── test/
 │   └── widget_test.dart         Navigation, contact validation and compact-layout coverage
@@ -73,7 +72,7 @@ flutter analyze
 flutter test
 ```
 
-The widget suite exercises navigation from Home through service and marketplace details, assistant navigation, contact-form validation, secondary pages, back navigation, and every implemented route at a compact phone width.
+The widget suite exercises navigation from Home through service and marketplace details, contact-form validation, secondary pages, back navigation, and every implemented route at a compact phone width.
 
 ## Build the Android APK
 
@@ -96,7 +95,6 @@ No application screenshots are included in this repository yet.
 ## Known limitations and scope notes
 
 - The contact form opens WhatsApp with a prepared message; it does not send automatically. The user must review and send it in WhatsApp.
-- Assistant replies are curated, on-device service information. No hosted assistant endpoint or credentials were supplied.
 - The public site does not list a contact email, so the app does not invent an email action.
 - The site's `/services/warehousing` sitemap URL returned 404 during inspection and is not in the live services menu; a separate warehousing detail screen is not fabricated.
 - Achievement captions are limited to information available on the public results page.

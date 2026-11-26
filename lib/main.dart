@@ -91,8 +91,6 @@ class HuntersGroupApp extends StatelessWidget {
             page = const EventsPage();
           } else if (route == '/brands') {
             page = const BrandsPage();
-          } else if (route == '/assistant') {
-            page = const AssistantPage();
           } else if (route == '/why-hunters') {
             page = const WhyHuntersPage();
           } else if (route == '/process') {
